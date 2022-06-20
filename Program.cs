@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Library.ECommerceApp;
 using Library.ECommerceApp.Services;
 using Newtonsoft.Json;
@@ -31,8 +31,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             if (usertype != 1) { customer = false; }
 
 
-
-
             // --------- EMPLOYEE - Inventory Menu (OPTION #2) ---------
             if (!customer)
             {
@@ -46,24 +44,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
                     {
                         // 1) CREATE - creates new product in inventory list
 
-                        // ---- Product by weight and quality ----
-                        Console.WriteLine("How would you like to Price Products?");
-                        Console.WriteLine("1. Price by Weight");
-                        Console.WriteLine("2. Price by Quantity");
-                        Console.Write("Enter choice: ");
-                        var pricetype = int.Parse(Console.ReadLine() ?? "0");
-                        Product? newProduct = null;
-                        if (pricetype == 1)  // Weight
-                        {
-                            newProduct = new ProductByWeight();
-                        }
-                        else    // Quantity
-                        {
-                            newProduct = new ProductByQuantity();
-                        }
-
                         Console.WriteLine("You chose to Add an Product.");
-                        //var newProduct = new Product();     // make new product newProduct
+                        var newProduct = new Product();     // make new product newProduct
 
                         FillProduct(newProduct);
                         Inventory.Create(newProduct);       // put newProduct in 
@@ -507,10 +489,4 @@ namespace MyApp // Note: actual namespace depends on the project name.
         Search, Save, Load, Checkout
       
     }
-
-    public enum ProductByType
-    {
-        ProductByWeight, ProductByQuantity
-    }
-
 } 
