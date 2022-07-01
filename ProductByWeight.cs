@@ -6,6 +6,6 @@ namespace Library.ECommerceApp.Models
 		public ProductByWeight()
 		{
 		}
-	}
+	}   
 }
 
