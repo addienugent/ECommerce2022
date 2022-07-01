@@ -145,50 +145,6 @@ namespace Library.ECommerceApp.Services
 
 
 
-
-
-			/*
-
-			// ----------------------------------------------------
-			//var inventoryList = ProductServices.Current;
-			var cprod = cartProducts.FirstOrDefault(p => p.Id == id);
-
-			if(cprod == null) // NOT IN CART 
-            {
-				return;
-            }
-
-			Console.WriteLine("How many would you like to remove? ");
-			int q = int.Parse(Console.ReadLine());
-
-			// SHOPPING CART
-			if(cprod.Quantity == q)    // if product in cart quantity is 0 or less remove from list
-			{
-				cartProducts.Remove(cprod);
-			}
-			else if(cprod.Quantity < q)
-			{
-				Console.WriteLine("Quantity unavaliable.");
-				return;
-			}
-			else // decrease by quantity amount by q
-			{
-				cartProducts.Remove(cprod);
-				cprod.Quantity -= q;
-				cartProducts.Add(cprod);
-			}
-
-			// INVENTORY
-
-			var iprod = inventoryList.Products.FirstOrDefault(p => p.Id == id);
-			if(iprod == null)	// if no item exists set to 0 and add q to quantity 
-            {
-				iprod = cprod;
-				iprod.Quantity = 0;
-            }
-			iprod.Quantity += q;	// adds q quantitys back to inventory
-			inventoryList.Update(iprod);	// updates in inventory 
-			*/
 			Console.WriteLine($"Successfull Removed {q} units of {cartprod.Name} to Cart \n");
 		}
 
