@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Library.ECommerceApp;
 using Library.ECommerceApp.Services;
 using Newtonsoft.Json;
